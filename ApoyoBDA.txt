@@ -1,0 +1,28 @@
+G:\Mi unidad\TEC Sep-Ene 2020\BD AVANZADAS\UNIDAD 1\Datos 
+
+docker run --name redis1 -v c:/users/edgar/redis:/var/lib/redis -d redis
+
+
+docker cp 1.5_Cassandra_Gonzalez_Valenzuela_Edgar.pdf cassandra1:/1.5_Cassandra_Gonzalez_Valenzuela_Edgar.pdf
+
+
+docker run -d -p 6379:6379 -v -v c:/users/edgar/redis:/data --name redis1 redis
+
+docker run --name redis1 -v c:/users/edgar/redis:/var/lib/redis -d evalenzueladocker/u1_labs:redis_16400922
+docker run --name cassandra1 -v c:/users/edgar/cassandra:/var/lib/cassandra -d cassandra
+docker run --name cassandra1 -v c:/users/edgar/cassandra:/var/lib/cassandra -d evalenzueladocker/u1_labs:cassandra_16400922
+
+CREATE KEYSPACE pruebadb01 WITH REPLICATION = { 'class' :
+'SimpleStrategy',
+'replication_factor' : 1 };
+
+docker cp 1.6_Neo4j_GonzalezValenzuela_EdgarGpe_16400922.pdf neo1:/1.6_Neo4j_GonzalezValenzuela_EdgarGpe_16400922.pdf
+docker run --name neo1 -v c:/users/edgar/neo4j:/var/lib/neo4j -d evalenzueladocker/u1_labs:neo4j_16400922
+
+
+
+db.Alumnos.save({ titulos: 'MongoDB', author: { nombre: 'Juan Perez', edad: "22", carrera: "ISC", materias: ["Web dev","NoSQL","SO"] }})
+db.ALumnos.find({ author: { nombre: "Juan Perez" }})
+
+
+docker cp 1.7_MongoDB_GonzalezValenzuela_EdgarGpe_16400922.pdf mongo1:/1.7_MongoDB_GonzalezValenzuela_EdgarGpe_16400922.pdf
